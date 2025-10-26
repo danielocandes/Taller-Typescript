@@ -45,7 +45,6 @@ function showSerieDetail(serie: any): void {
   detailDescription.textContent = serie.description;
   detailLink.href = serie.link;
 
-  // Mostramos la card (usando clases de Bootstrap)
   detailCard.classList.remove("d-none");
 }
 console.log("main.ts ejecutado");
