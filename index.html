@@ -9,21 +9,40 @@
     />
   </head>
   <body class="p-4">
-    <h1>Listado de Series</h1>
+    <div class="container">
+      <h1 class="mb-4 text-primary">Listado de Series</h1>
 
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Nombre</th>
-          <th>Canal</th>
-          <th>Temporadas</th>
-        </tr>
-      </thead>
-      <tbody id="series-body"></tbody>
-    </table>
+      <div class="row">
+        <!-- Columna izquierda: tabla -->
+        <div class="col-md-8">
+          <table class="table table-hover table-bordered text-center">
+            <thead class="thead-dark">
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Canal</th>
+                <th>Temporadas</th>
+              </tr>
+            </thead>
+            <tbody id="series-body"></tbody>
+          </table>
 
-    <p id="average" class="font-weight-bold"></p>
+          <p id="average" class="fw-bold"></p>
+        </div>
+
+        <!-- Columna derecha: detalle -->
+        <div class="col-md-4">
+          <div id="serie-detail" class="card d-none">
+            <img id="serie-image" class="card-img-top" src="" alt="Imagen de la serie">
+            <div class="card-body">
+              <h5 id="serie-title" class="card-title"></h5>
+              <p id="serie-description" class="card-text"></p>
+              <a id="serie-link" href="#" target="_blank" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="./dist/main.js"></script>
   </body>
